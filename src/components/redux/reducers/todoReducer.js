@@ -1,19 +1,18 @@
-import { SET_TODO } from '../actions/types';
+import { SET_TODO } from "../actions/types";
 const initialState = {
-    todoList: [],
+  todoList: [],
 };
 
-export default function (state = initialState, actions) {
-
-    const { type, payload } = actions;
-    switch (type) {
-        case SET_TODO:
-            return {
-                ...state,
-                todoList: payload,
-            };        
-        default:
-            return state;
-
-    }
+const todoReducer = (state = initialState, actions) => {
+  const { type, payload } = actions;
+  switch (type) {
+    case SET_TODO:
+      return {
+        ...state,
+        todoList: payload,
+      };
+    default:
+      return state;
+  }
 }
+export default  todoReducer;

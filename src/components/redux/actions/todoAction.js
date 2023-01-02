@@ -1,5 +1,5 @@
 
-import { SET_TODO, REMOVE_TODO } from './types';
+import { SET_TODO } from './types';
 
 export const addToDo = data => dispatch => {
 
